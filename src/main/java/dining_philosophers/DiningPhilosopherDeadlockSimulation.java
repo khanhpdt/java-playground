@@ -72,7 +72,7 @@ public class DiningPhilosopherDeadlockSimulation {
                 System.out.println(this + ": Waiting for right fork");
                 synchronized (rightFork) {
                     System.out.println(this + ": Got " + rightFork + " as right fork");
-                    perform("eating", 400);
+                    perform("eating", 600);
                     countDownLatch.countDown();
                 }
             }
