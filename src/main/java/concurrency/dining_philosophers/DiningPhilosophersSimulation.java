@@ -1,4 +1,4 @@
-package dining_philosophers;
+package concurrency.dining_philosophers;
 
 import java.util.Arrays;
 import java.util.concurrent.CountDownLatch;

@@ -1,4 +1,4 @@
-package playgrounds;
+package concurrency.playgrounds;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;

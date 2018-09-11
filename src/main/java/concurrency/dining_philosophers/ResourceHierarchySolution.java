@@ -1,4 +1,4 @@
-package dining_philosophers;
+package concurrency.dining_philosophers;
 
 /**
  * Using the Resource hierarchy solution. This solution occasionally suffers from starvation.

@@ -1,4 +1,4 @@
-package dining_philosophers;
+package concurrency.dining_philosophers;
 
 /**
  * This solution occasionally suffers from deadlock.

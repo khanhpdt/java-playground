@@ -1,4 +1,4 @@
-package playgrounds;
+package concurrency.playgrounds;
 
 public class WaitNotify {
 
