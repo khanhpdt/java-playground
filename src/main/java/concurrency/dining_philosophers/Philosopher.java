@@ -39,7 +39,6 @@ abstract class Philosopher implements Runnable {
     }
 
     private void eat() throws InterruptedException {
-        // always try to get the fork of lower index first.
         Fork firstFork = pickFirstFork();
         synchronized (firstFork) {
             System.out.println(this + ": Got " + firstFork + " as left fork");

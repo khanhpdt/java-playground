@@ -32,6 +32,7 @@ public class ResourceHierarchySolution {
 
         @Override
         Fork pickFirstFork() {
+            // always try to get the fork of lower index first.
             firstFork = leftFork.getIndex() <= rightFork.getIndex() ? leftFork : rightFork;
             return firstFork;
         }

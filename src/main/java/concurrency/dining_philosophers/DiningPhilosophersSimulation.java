@@ -49,11 +49,11 @@ class DiningPhilosophersSimulation {
         } else {
             long nPhilosophersHaveAte = Arrays.stream(philosophers).filter(p -> p.getEatingCount() > 0).count();
             if (nPhilosophersHaveAte == nPhilosophers) {
-                System.out.println("All philosophers have ate");
+                System.out.println("All philosophers have eaten");
             } else {
                 long nPhilosophersHaveAteMoreThanOneTime = Arrays.stream(philosophers).filter(p -> p.getEatingCount() > 1).count();
-                System.out.println(nPhilosophersHaveAteMoreThanOneTime + " philosophers have ate more than one time.");
-                System.out.println((nPhilosophers - nPhilosophersHaveAte) + " philosophers have not ate. " +
+                System.out.println(nPhilosophersHaveAteMoreThanOneTime + " philosophers have eaten more than one time.");
+                System.out.println((nPhilosophers - nPhilosophersHaveAte) + " philosophers have not eaten. " +
                         "This is a symptom of starvation.");
             }
         }
