@@ -1,6 +1,6 @@
-package concurrency.playgrounds;
+package concurrency.synchronizers;
 
-public class WaitNotify {
+public class WaitNotifyPlayground {
 
     public static void main(String[] args) {
         Object lock = new Object();
