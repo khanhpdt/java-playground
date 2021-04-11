@@ -37,7 +37,7 @@ public class GenericsTest {
 	}
 
 	@Test
-	public void testSubtypingWithWildcards() throws Exception {
+	public void testSubtypingWithWildcards() {
 		List<Integer> ints = new ArrayList<>();
 		List<? extends Number> numberInts = ints;
 
@@ -60,7 +60,7 @@ public class GenericsTest {
 	}
 
 	@Test
-	public void testCovariance() {
+	public void genericsAreInvariant() {
 		method(new Integer[]{1, 2, 3});
 		method(new Double[]{1.3, 2.2, 3.1});
 		// OK because arrays are covariant
