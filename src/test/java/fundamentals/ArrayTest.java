@@ -18,7 +18,7 @@ import static org.hamcrest.object.IsCompatibleType.typeCompatibleWith;
 public class ArrayTest {
 
 	@Test
-	public void testArraysOfSameTypeHaveSameClassObject() {
+	public void arraysOfSameTypeHaveSameClassObject() {
 		int[] intArray1 = new int[1];
 		int[] intArray2 = new int[1];
 		assertThat("arrays of same primitive type", intArray1.getClass() == intArray2.getClass());
@@ -29,7 +29,7 @@ public class ArrayTest {
 	}
 
 	@Test
-	public void testArraysOfDifferentTypesHaveDifferentClassObjects() {
+	public void arraysOfDifferentTypesHaveDifferentClassObjects() {
 		Integer[] integerArray = new Integer[1];
 		Long[] longArray = new Long[1];
 		assertThat("arrays of different type have different class objects",
@@ -58,7 +58,7 @@ public class ArrayTest {
 	}
 
 	@Test
-	public void testVariousWaysToCreateArrays() {
+	public void differentWaysToCreateArrays() {
 		Integer[] a;
 		a = new Integer[]{1, 2, 3, 4};
 		assertThat(a, arrayContaining(1, 2, 3, 4));
@@ -69,17 +69,19 @@ public class ArrayTest {
 	}
 
 	@Test
-	public void testLengthIsTheDeclaredLength() throws Exception {
+	public void arrayLengthIsTheDeclaredLength() {
 		int[] c = new int[3];
 		assertThat("length is the declared length of the array, not the number of elements that the array is holding",
 				c.length, is(3));
 	}
 
 	@Test
-	public void testCovariantTypeInArrays() throws Exception {
+	public void arraysAreCovariant() {
+		// Integer < Number
 		Number[] numberArray = new Number[1];
 		Integer[] integerArray = new Integer[1];
 
+		// then, Integer[] < Number[]
 		assertThat(integerArray.getClass(), typeCompatibleWith(numberArray.getClass()));
 	}
 }
